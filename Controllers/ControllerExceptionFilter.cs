@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace JobTargetCodingChallange.Controllers
 {
@@ -22,6 +23,7 @@ namespace JobTargetCodingChallange.Controllers
 
             switch (context.Exception)
             {
+                case ValidationException _:
                 case InvalidOperationException _:
                 case ArgumentException _:
                     context.Result = new BadRequestObjectResult(context.Exception.Message);

@@ -1,6 +1,7 @@
 ﻿using JobTargetCodingChallange.Controllers.Request;
 using JobTargetCodingChallange.Domain.Item;
 using JobTargetCodingChallange.Entity.Sale;
+using JobTargetCodingChallange.Validation;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
@@ -19,15 +20,6 @@ namespace JobTargetCodingChallange.Services
 
         public async Task<Order> CreateFromOrderRequest(OrderRequest orderRequest)
         {
-
-            if (orderRequest.Products == null) {
-                throw new ArgumentException("Order request must have products");
-            }
-
-            if (orderRequest.ShippingInfo == null)
-            {
-                throw new ArgumentException("Order request must have shipping info");
-            }
 
             Order order = new()
             {

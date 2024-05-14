@@ -1,5 +1,7 @@
 ﻿using JobTargetCodingChallange.Entity;
+using JobTargetCodingChallange.Entity.Sale;
 using JobTargetCodingChallange.Services;
+using JobTargetCodingChallange.Validation;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
@@ -20,6 +22,7 @@ namespace JobTargetCodingChallange
 
         public virtual async Task<TEnity> Create(TEnity entity)
         {
+            ValidationService.ThrowIfEntityIsInvalid(entity);
             _context.Set<TEnity>().Add(entity);
             await _context.SaveChangesAsync();
             _logger.LogInformation($"Created {entity.GetType()} {JsonSerializer.Serialize(entity)}"); 
