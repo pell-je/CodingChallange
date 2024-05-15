@@ -20,7 +20,7 @@ I will delete this repository when my application for the software positon is cl
 1. I removed setting the Id in the backend. I left the database to use auto-increment/identity to set it.
 2. I changed the Id type of the Order entity to a long. This is a much better type for an entity that will likly be stored in a database. A string Id could also be used, especially if its used in a nosql database. I choose to use a long here. The Id database column could be a BIGINT if using a sql database.
 3. I added a semi-colon.
-4. I created a class for AppDbContext and added it to the dependecny injection container.
+4. I created a class for AppDbContext and added it to the dependency injection container.
 
 ### Some other changes I made for Quaility of Code. 
 1. Use a service layer to access the database. Using a service layer in the controller allows for code reuse and decouples logic.
