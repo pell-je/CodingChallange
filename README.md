@@ -13,7 +13,7 @@ I will delete this repository when my application for the software positon is cl
 ### I found four issues with the OrderController:
 1. The Id was being set with a Random. This is not a reliable way to generate ids. The random could generate a value that is already used.
 2. The return value of Random.Next is an int. The ID value of the Order entity is a string.
-3. A semi-colon is needed after the last curly brace instantiate the Order object.
+3. A semi-colon is needed after the last curly brace when instantiating the Order object.
 4. The AppDbContext does not exsist.
 
 ### How my changes fix these issues:
