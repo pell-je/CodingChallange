@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JobTargetCodingChallange\JobTargetCodingChallange.csproj" />
+    <ProjectReference Include="..\JobTarget\JobTargetCodingChallange.csproj" />
   </ItemGroup>
 
   <ItemGroup>
