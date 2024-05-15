@@ -7,6 +7,8 @@ My solution for this Coding Challange can be seen in this Pull Request:
 </br> 
 https://github.com/pell-je/CodingChallange/pull/1/files
 
+I will delete this repository when my application for the software positon is closed or when I am requested to do so. 
+
 
 ### I found four issues with the OrderController:
 1. The Id was being set with a Random. This is not a reliable way to generate ids. The random could generate a value that is already used.
