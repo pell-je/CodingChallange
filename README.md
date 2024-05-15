@@ -29,6 +29,7 @@ I will delete this repository when my application for the software positon is cl
 4. Use the required keyword to reduce null pointer exceptions
 5. Validate entities before saving to database
 6. Add Test Coverage for OrderContoller and OrderService
+7. Remove commented out code for the Update functionality in OrderController 
 
 ### Test Results: </br>
 ![image](https://github.com/pell-je/CodingChallange/assets/90728658/af29b043-82f8-4840-86e9-801f9558f2a1)
