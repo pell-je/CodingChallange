@@ -1,7 +1,7 @@
 # JobTargetCodingChallange
 
 I created a Github repo for this coding challange.
-The master branch is the OrderController service as was sent to me via the emailed order_api_cs.txt file.
+The master branch includes the OrderController service as was sent to me via the emailed order_api_cs.txt file.
 </br></br> 
 My solution for this Coding Challange can be seen in this Pull Request:
 </br> 
