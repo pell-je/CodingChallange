@@ -1,6 +1,6 @@
 @JobTargetCodingChallange_HostAddress = http://localhost:5234
 
-GET {{JobTargetCodingChallange_HostAddress}}/weatherforecast/
+GET {{JobTargetCodingChallange_HostAddress}}/Orders/
 Accept: application/json
 
 ###

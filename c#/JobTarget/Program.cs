@@ -1,4 +1,9 @@
 
+using JobTargetCodingChallange.Controllers;
+using JobTargetCodingChallange.Services;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.EntityFrameworkCore;
+
 namespace JobTargetCodingChallange
 {
     public class Program
@@ -7,9 +12,19 @@ namespace JobTargetCodingChallange
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddControllers();      
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("JobTargetDb"));
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddControllers(options =>
+            {
+                options.Filters.Add<ControllerExceptionFilter>();
+            });
+
+            builder.Services.AddScoped<ControllerExceptionFilter>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
 
             var app = builder.Build();
 
@@ -20,7 +35,6 @@ namespace JobTargetCodingChallange
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
